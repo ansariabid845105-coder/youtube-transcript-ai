@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transcript AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Glow -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">▶</span>
+            Transcript<span>AI</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#" id="homeLink">Home</a>
+            <a href="#" id="historyLink">History</a>
+            <a href="#" id="aboutLink">About</a>
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="container">
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="homeSection">
+
+            <div class="badge">
+                ✨ FAST • SIMPLE • POWERFUL
+            </div>
+
+            <h1>
+                Turn YouTube Videos<br>
+                Into <span>Text</span>
+            </h1>
+
+            <p>
+                Paste a YouTube video URL and generate its transcript
+                instantly.
+            </p>
+
+        </section>
+
+
+        <!-- ================= GENERATE TRANSCRIPT ================= -->
+
+        <section class="main-card">
+
+            <div class="input-section">
+
+                <label for="youtubeUrl">
+                    YouTube Video URL
+                </label>
+
+                <div class="input-group">
+
+                    <div class="input-wrapper">
+
+                        <span class="link-icon">🔗</span>
+
+                        <input
+                            type="text"
+                            id="youtubeUrl"
+                            placeholder="https://www.youtube.com/watch?v=..."
+                        >
+
+                    </div>
+
+                    <button id="generateBtn">
+                        Generate
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+                <p class="input-hint">
+                    Supports youtube.com and youtu.be links
+                </p>
+
+            </div>
+
+
+            <div class="divider"></div>
+
+
+            <!-- Transcript Header -->
+
+            <div class="transcript-header">
+
+                <div>
+
+                    <h2>Transcript</h2>
+
+                    <p>
+                        Your generated transcript will appear here.
+                    </p>
+
+                </div>
+
+                <div class="status">
+
+                    <span class="status-dot"></span>
+
+                    <span id="statusText">
+                        Ready
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Transcript Box -->
+
+            <div id="transcript" class="transcript-box">
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        Ready to generate
+                    </h3>
+
+                    <p>
+                        Enter a YouTube URL above to get started.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Transcript Actions -->
+
+            <div class="transcript-actions">
+
+                <button id="copyBtn">
+                    📋 Copy
+                </button>
+
+                <button id="downloadBtn">
+                    ⬇ Download TXT
+                </button>
+
+            </div>
+
+
+            <!-- Transcript Statistics -->
+
+            <div class="transcript-stats">
+
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        Words
+                    </span>
+
+                    <strong id="wordCount">
+                        0
+                    </strong>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        Characters
+                    </span>
+
+                    <strong id="characterCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HISTORY ================= -->
+
+        <section
+            id="historySection"
+            class="history-section"
+        >
+
+            <div class="history-header">
+
+                <div>
+
+                    <h2>
+                        Transcript History
+                    </h2>
+
+                    <p>
+                        Your previously generated transcripts.
+                    </p>
+
+                </div>
+
+                <button id="refreshHistoryBtn">
+                    🔄 Refresh
+                </button>
+
+            </div>
+
+
+            <!-- History List -->
+
+            <div
+                id="historyList"
+                class="history-list"
+            >
+
+                <p class="history-empty">
+                    Loading history...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <h3>
+                        Fast
+                    </h3>
+
+                    <p>
+                        Generate transcripts quickly.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🔒
+                </div>
+
+                <div>
+
+                    <h3>
+                        Saved
+                    </h3>
+
+                    <p>
+                        Your transcripts are stored safely.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    📄
+                </div>
+
+                <div>
+
+                    <h3>
+                        Simple
+                    </h3>
+
+                    <p>
+                        Clean and readable transcripts.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section
+            id="aboutSection"
+            class="about-section"
+        >
+
+            <div class="about-card">
+
+                <div class="badge">
+                    ABOUT THE PROJECT
+                </div>
+
+                <h2>
+                    About <span>TranscriptAI</span>
+                </h2>
+
+                <p>
+                    TranscriptAI is a YouTube transcript generator
+                    that converts available YouTube captions into
+                    readable text.
+                </p>
+
+                <div class="tech-stack">
+
+                    <div class="tech-item">
+                        <strong>FastAPI</strong>
+                        <span>Backend</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <strong>PostgreSQL</strong>
+                        <span>Database</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <strong>JavaScript</strong>
+                        <span>Frontend Logic</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <strong>HTML & CSS</strong>
+                        <span>Frontend UI</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Built with
+            <span>FastAPI</span> •
+            <span>PostgreSQL</span> •
+            <span>JavaScript</span>
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
